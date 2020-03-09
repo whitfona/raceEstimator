@@ -6,10 +6,18 @@
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whitfon/raceEstimator.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "homepage": "https://whitfona.github.io/raceEstimator",
+  "bugs": {
+    "url": "https://github.com/whitfon/raceEstimator/issues"
+  },
+  "homepage": "https://github.com/whitfon/raceEstimator#readme",
   "dependencies": {
     "gh-pages": "^2.2.0"
   }
