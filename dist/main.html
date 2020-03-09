@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Estimator</title>
+    <script src="race.js"></script>
+    <link href="stlye.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>RACE FINISH TIME ESTIMATOR</h1>
+    </div>
+
+    <!-- Triathlon Part --> 
+    <div class="tri"> <!--start of holder div-->
+        <p style="padding: 1% 5%;">Select Triathlon Event:
+        
+        <select id="triDistance" onchange="showEvent();">
+            <option value="Swim: 750m, Bike: 20 km, Run: 5 km">Sprint</option>
+            <option value="Swim: 1,500m, Bike: 40 km, Run: 10 km">Olympic</option>
+            <option value="Swim: 1,900m, Bike: 90 km, Run: 21.1 km">Half</option>
+            <option value="Swim: 3,800m, Bike: 180.2 km, Run: 42.2 km">Full</option>
+        </select> </p>
+        
+        <span id="triOutput" style="padding: 0 5% 0%; min-height: 150px;"></span>
+
+    <div class="triDis"> <!--chart of calculator (left div)-->
+        <p>Swim Pace: <input type="number" id="triSwimMin" size="6" value="1" min="0" max="10"> min 
+            <input type="number" id="triSwimSec" size="6" value="45" min="0" max="59">  sec/100m</p> 
+        <p>Transition 1: <input type="number" id="t1Min" size="6" value="2" min="0" max="10"> min 
+            <input type="number" id="t1Sec" size="6" value="15" min="0" max="59">  sec</p> 
+        <p>Bike Pace: <input type="number" id="bikeTime" size="6" value="25" min="0" max="100"> km/hr</p>   
+        <p>Transition 2: <input type="number" id="t2Min" size="6" value="1" min="0" max="10"> min 
+            <input type="number" id="t2Sec" size="6" value="45" min="0" max="59">  sec</p> 
+        <p>Run Pace: <input type="number" id="triRunMin" size="6" value="5" min="0" max="10"> min 
+            <input type="number" id="triRunSec" size="6" value="30" min="0" max="59">  sec/km</p> 
+        <input type="button" id="triSubmit" onclick="triFinishTime();" value="Find out your triathlon time!">
+       
+
+    <p> Estimated Finish Time: <p id="triFinishTime"></p></p>
+    </div>
+
+    <div class="chuck"> <!--start of Chuck div (right div)-->
+        <p style="text-align: center;"><img id="ChuckNorris" src="Chuck_Norris.jpg" >  </p>
+        <div class="overlay">
+            <div class="text">POW!</div>
+        </div>
+    </div>
+    </div> <!--end of holder div-->
+
+
+    <!-- RUNNING PART -->
+    <br><br>
+    
+    <div class="run">
+        <p>Select Run Event: 
+        <select id="run">
+            <option value="5">5 km</option>
+            <option value="10">10 km</option>
+            <option value="21.1">Half Marathon (21.1 km)</option>
+            <option value="30">30 km</option>
+            <option value="42.2">Marathon (42.2 km)</option>
+        </select> </p>
+        <p>Run Pace: <input type="number" id="runMin" size="6" value="5" min="0" max="10"> min 
+            <input type="number" id="runSec" size="6" value="30" min="0" max="59"> sec/km</p> 
+        <input type="button" id="runSubmit" onclick="runFinishTime();" value="Find out your run time!"> 
+        <br><br>
+
+        <p> Estimated Finish Time: <p id="runOutput"></p></p>
+    </div> 
+</body>
+</html>
