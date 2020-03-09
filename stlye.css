@@ -1,0 +1,91 @@
+body {
+   background-color: rgba(243, 155, 55, 0.6);
+}
+
+.header {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 75px;
+    background: -webkit-linear-gradient(#0033cc, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+#triOutput {
+    font-style: italic;
+}
+
+input#runPace {
+    width: 30px;
+}
+
+.tri {
+    font-family: sans-serif;
+    height: 450px;
+    /*background-color: greenyellow;*/
+}
+
+.triDis {
+    font-family: sans-serif;
+    width: 60%;
+    float: left;
+    padding: 5%;
+    /*background-color: blue;*/
+}
+
+.chuck {
+    width: 30%;
+    float: left;
+    padding-top: 1%;
+    vertical-align: middle;
+    display: block;
+    /*background-color: red;*/
+}
+
+#ChuckNorris {
+    height: 350px;
+}
+
+.run {
+    font-family: sans-serif;
+    border-top: 1px solid;
+    padding: 5%;
+    /*background-color: orange;*/
+}
+
+.overlay {
+    position: absolute; 
+    top: 10%;
+    left: 10%;
+    /*right: 0;*/
+    background-color: rgb(255, 0, 0);
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.chuck:hover .overlay {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+.text {
+  color: white;
+  font-size: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
